@@ -92,8 +92,19 @@ def main():
                 title5 = extract_title(result[4])
 
 
-                #abstract = extract_abstract(result[0])
-                #date = extract_date(result[0])
+                abstract1 = extract_abstract(result[0])
+                abstract2 = extract_abstract(result[1])
+                abstract3 = extract_abstract(result[2])
+                abstract4 = extract_abstract(result[3])
+                abstract5 = extract_abstract(result[4])
+                
+                date1 = extract_date(result[0])
+                date2 = extract_date(result[1])
+                date3 = extract_date(result[2])
+                date4 = extract_date(result[3])
+                date5 = extract_date(result[4])
+
+
                 
                 #st.write("Patent Title:", result['patent_title'])
                 #st.write("Patent Abstract:", result['patent_abstract'])
@@ -112,15 +123,31 @@ def main():
                 #st.write("**Patent Description:**")
                 #st.write(title)
                 st.write("Result 1:")
-                st.write("Patent Title: {}".format(title1))
+                with st.expander("Patent Title: {}".format(title1)):
+                    st.write("**Patent Description:**")
+                    st.write("Abstract: {}".format(abstract1))
+                    st.write("Dated: {}".format(date1))
                 st.write("Result 2:")
-                st.write("Patent Title: {}".format(title2))
+                with st.expander("Patent Title: {}".format(title2)):
+                    st.write("**Patent Description:**")
+                    st.write("Abstract: {}".format(abstract2))
+                    st.write("Dated: {}".format(date2))
                 st.write("Result 3:")
-                st.write("Patent Title: {}".format(title3))
+                with st.expander("Patent Title: {}".format(title3)):
+                    st.write("**Patent Description:**")
+                    st.write("Abstract: {}".format(abstract3))
+                    st.write("Dated: {}".format(date3))
                 st.write("Result 4:")
-                st.write("Patent Title: {}".format(title4))
+                with st.expander("Patent Title: {}".format(title4)):
+                    st.write("**Patent Description:**")
+                    st.write("Abstract: {}".format(abstract4))
+                    st.write("Dated: {}".format(date4))
                 st.write("Result 5:")
-                st.write("Patent Title: {}".format(title5))
+                with st.expander("Patent Title: {}".format(title5)):
+                    st.write("**Patent Description:**")
+                    st.write("Abstract: {}".format(abstract5))
+                    st.write("Dated: {}".format(date5))
+                
 
                 
                 #st.write("Abstract: {}".format(abstract))
@@ -130,7 +157,7 @@ def main():
                 #st.write(abstract)
                 #st.write("**Patent Date:**")
                 #st.write(date) 
-
+           
                 
         else:
             st.write("No results found for the query:", query)
